@@ -23,6 +23,8 @@
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // 원격서버의 인증서 유효성 검사
         $response = curl_exec($curl);
 
+        // Save to DB
+
         curl_close($curl);
 
     }
@@ -53,3 +55,20 @@
     </div>
 </div>
 </form>
+
+<script>
+    function repeatCrawling()
+    {
+        setInterval(function(){
+            crawling();
+        }, 3000)
+    }
+
+    function crawling()
+    {
+        alert('crawling...');
+    }
+
+    repeatCrawling();
+</script>
+ 
