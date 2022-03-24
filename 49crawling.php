@@ -9,12 +9,26 @@
 
     echo "url = $url <br>";
 
-    if($url != "")
-    {
+
         // CURL : cURL : Client URL
         // wget https://kbstar.com
 
-        $OPENURL = $url;
+    if(isset($_GET["page"]))
+    {
+        $page = $_GET["page"];
+    }else
+    {
+        $page = 1;
+    }
+        echo "page = $page <br>";
+        // 1 - 1
+        // 2 - 11
+        // 3 - 21
+        // 4 - 31
+        // n - (n-1)* 10 + 1 
+        $start = ($page -1) * 10 +1;
+
+        $OPENURL = "https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EA%B5%AD%EB%AF%BC%EC%9D%80%ED%96%89&start=$start";
         // init
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $OPENURL);  // URL 지정
@@ -27,7 +41,7 @@
 
         curl_close($curl);
 
-    }
+
 
 ?>
 <form method="post" action="main.php?cmd=49crawling">
@@ -56,12 +70,20 @@
 </div>
 </form>
 
+<?php
+    $nextPage = $page + 1;
+
+
+    if($page >=10)
+        exit();
+?>
+
+
 <script>
     function repeatCrawling()
     {
-        setInterval(function(){
-            alert('crawling');
-        }, 3000)
+        setTimeout( location.href='main.php?cmd=49crawling&page=<?php echo "$nextPage"; ?>', 3000);
+        
     }
 
 
