@@ -47,7 +47,22 @@
     </div>
 </div>
 
-
+<div class="row">
+    <div class="col">
+        <ul>
+            <li>item 1</li>
+            <li>item 2
+                <ul>
+                    <li>item a</li>
+                    <li>item b</li>
+                </ul>
+            </li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+    </div>
+</div>
 
 
 <script>
@@ -108,6 +123,8 @@
         $("td").not(function(index){
             return index % 2 == 1;
         }).css("background", "#FF0000");
+
+        $("li").
 
     }
 
