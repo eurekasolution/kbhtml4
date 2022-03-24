@@ -60,14 +60,10 @@
     function repeatCrawling()
     {
         setInterval(function(){
-            crawling();
+            alert('crawling');
         }, 3000)
     }
 
-    function crawling()
-    {
-        alert('crawling...');
-    }
 
     repeatCrawling();
 </script>
