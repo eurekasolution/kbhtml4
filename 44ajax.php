@@ -17,8 +17,20 @@
         let key = document.querySelector("#key").value;
         let result = document.querySelector("#result");
 
+        let param = "key="+key;
+        $.ajax({
+            url: "45ajaxServer.php",
+            data:  param,
+            type: "POST",
+            cache: false,
+            success: function(data) {
+                //alert(data);
+                $("#result").html(data);
+            } 
 
-        // 45ajaxServer.php?key=키보드입력
+        });
+
+        // 45ajaxServer.php?key=키보드입력&age=13
 
         /*
         let regex = /^[a-zA-Z0-9]{4,10}$/;

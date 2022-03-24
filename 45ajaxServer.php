@@ -1,6 +1,6 @@
 <?php
 
-    $key = $_GET["key"];
+    $key = $_POST["key"];
     echo "your input is $key ";
 
 ?>
