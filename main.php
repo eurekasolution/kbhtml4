@@ -125,7 +125,7 @@
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">jQuery</a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="main.php?cmd=43jquery">jQuery Basic</a></li>
-						<li><a class="dropdown-item" href="main.php?cmd=24js">Variable</a></li>
+						<li><a class="dropdown-item" href="main.php?cmd=44ajax">Why Ajax</a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=25if">If </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=26calculator">Calculator </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=27if">If 2 </a></li>

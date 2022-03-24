@@ -124,7 +124,13 @@
             return index % 2 == 1;
         }).css("background", "#FF0000");
 
-        $("li").
+        $("li").has("ul").css("background", "#ABCDEF");
+
+        $("*").each(function(){
+            if($(this).is("li")) {
+                $(this).css("border", "3px dotted #FF0000");
+            }   
+        })
 
     }
 
