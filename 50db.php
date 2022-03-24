@@ -21,7 +21,7 @@
 
 
 <?php
-    $sql = "select * from kbstar";
+    $sql = "select * from kbstar"; // Query 
     $result = mysqli_query($conn, $sql);
     $data = mysqli_fetch_array($result);
 
