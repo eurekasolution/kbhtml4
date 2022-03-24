@@ -1,0 +1,17 @@
+
+1. 데이터베이스 -> 테이블
+
+
+create table kbstar (
+    idx int(10) auto_increment,
+    id  char(20) unique,
+    name char(20),
+    age  int(3) default '10',
+    primary key(idx)
+);
+
+insert into kbstar (id, name, age) values('test', '테스트', '12');
+insert into kbstar (id, name, age) values('admin', '관리자', '32');
+insert into kbstar (id, name, age) values('sslee', '이순신', '42');
+
+

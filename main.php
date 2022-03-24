@@ -4,6 +4,9 @@
 	session_start();
 
 	include "config.php";
+	include "db.php";
+
+	$conn = connectDB();
 ?>
 <!doctype html> 
 <html lang="ko"> 
@@ -129,7 +132,7 @@
 						<li><a class="dropdown-item" href="main.php?cmd=46search">Ajax Search </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=48method">jQuery Method </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=49crawling">Crawling </a></li>
-						<li><a class="dropdown-item" href="main.php?cmd=28for">For </a></li>
+						<li><a class="dropdown-item" href="main.php?cmd=50db">Database </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=29function">Function </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=30es6">ES6 </a></li>
 						<li><a class="dropdown-item" href="main.php?cmd=31event">Event </a></li>					
